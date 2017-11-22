@@ -34,4 +34,4 @@
 29. bento[for="Vitaly"]
 30. *[for^="Sa"]
 31. *[for$="ato"]
-32. *[for*="obb"]
+32. \*[for*="obb"]
