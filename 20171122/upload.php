@@ -21,7 +21,7 @@ if(empty($height)||empty($weight)==true){
     echo "weight=$weight<br>";
     echo "BMI=".$weight/$height/$height."<br>";
 }
-if(empty($_FILES)===true){
+if(empty($_FILES["file"]["name"])===true){
     echo "empty";
 }elseif(strpos($_FILES["file"]["type"],"image/")!==false){
     $filename=iconv('utf-8','big5', $_FILES["file"]["name"]);
