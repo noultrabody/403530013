@@ -24,9 +24,9 @@ if(empty($height)||empty($weight)==true){
 if(empty($_FILES["file"]["name"])===true){
     echo "empty";
 }elseif(strpos($_FILES["file"]["type"],"image/")!==false){
-    $filename=iconv('utf-8','big5', $_FILES["file"]["name"]);
+    $filename=iconv("UTF-8","BIG5", $_FILES["file"]["name"]);
     move_uploaded_file($_FILES["file"]["tmp_name"],"upload/".$filename);
-    echo '<img src="upload/'.$filename.'"/>';
+    echo '<img src="upload/'.iconv("BIG5", "UTF-8", $filename).'"/>';
 }else{
     echo "wrong file type";
 }
